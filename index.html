@@ -1,0 +1,2528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelUnfold – Web Design, Development &amp; eCommerce Agency</title>
+  <meta name="description"
+    content="PixelUnfold crafts high-performing websites, brands, and eCommerce solutions. We turn your vision into a powerful digital experience that drives real business growth.">
+  <meta name="keywords"
+    content="web design agency, website development, Shopify development, WordPress, branding, eCommerce, PixelUnfold">
+  <meta name="author" content="PixelUnfold">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.pixelunfold.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PixelUnfold – Unfold Your Brand Into a Digital Experience">
+  <meta property="og:description"
+    content="High-performing websites, branding &amp; eCommerce solutions for ambitious businesses.">
+  <meta property="og:url" content="https://www.pixelunfold.com/">
+  <meta property="og:site_name" content="PixelUnfold">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PixelUnfold – Digital Agency">
+  <meta name="twitter:description" content="Web design, development &amp; eCommerce solutions that drive growth.">
+  <link rel="icon" href="assets/images/pixelunfold-icon.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/images/pixelunfold-logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=JetBrains+Mono:wght@400&amp;family=Syne:wght@400;600;700;800&amp;display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=JetBrains+Mono:wght@400&amp;family=Syne:wght@400;600;700;800&amp;display=swap">
+  </noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  </noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "PixelUnfold",
+    "description": "Digital agency specializing in web design, development, branding and eCommerce",
+    "url": "https://www.pixelunfold.com",
+    "telephone": "+917359064217",
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+    "serviceType": ["Web Design", "Web Development", "eCommerce", "Branding"],
+    "priceRange": "₹₹"
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --color-bg-primary: #0B0F1A;
+      --color-bg-secondary: #111827;
+      --color-accent-purple: #7C3AED;
+      --color-accent-blue: #2563EB;
+      --color-gradient: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
+      --color-gradient-hover: linear-gradient(135deg, #6D28D9 0%, #1D4ED8 100%);
+      --color-text-primary: #F9FAFB;
+      --color-text-secondary: #B4BDC9;
+      --color-text-on-dark: #E5E7EB;
+      --color-glass-bg: rgba(255, 255, 255, 0.04);
+      --color-glass-border: rgba(255, 255, 255, 0.08);
+      --color-glow-purple: rgba(124, 58, 237, 0.3);
+      --color-glow-blue: rgba(37, 99, 235, 0.3);
+      --container-max: 1440px;
+      --font-display: "Syne", system-ui, sans-serif;
+      --font-body: "DM Sans", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--color-bg-primary);
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body.nav-open {
+      overflow: hidden;
+    }
+
+    .custom-cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      z-index: 99997;
+      display: none;
+    }
+
+    body.has-custom-cursor .custom-cursor {
+      display: block;
+    }
+
+    .custom-cursor-ring {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      margin: -20px 0 0 -20px;
+      border-radius: 50%;
+      border: 2px solid rgba(167, 139, 250, 0.55);
+      box-shadow: 0 0 20px rgba(124, 58, 237, 0.35), inset 0 0 12px rgba(37, 99, 235, 0.15);
+      transform: translate3d(0, 0, 0) scale(1);
+      will-change: transform;
+    }
+
+    .custom-cursor-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      margin: -4px 0 0 -4px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #F9FAFB, #A78BFA 55%, #6366F1);
+      box-shadow: 0 0 12px rgba(167, 139, 250, 0.9);
+      transform: translate3d(0, 0, 0);
+      will-change: transform;
+    }
+
+    body.has-custom-cursor.is-cursor-press .custom-cursor-ring {
+      border-color: rgba(96, 165, 250, 0.95);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      body.has-custom-cursor:not(.keyboard-nav) {
+        cursor: none;
+      }
+
+      body.has-custom-cursor:not(.keyboard-nav) a,
+      body.has-custom-cursor:not(.keyboard-nav) button,
+      body.has-custom-cursor:not(.keyboard-nav) label,
+      body.has-custom-cursor:not(.keyboard-nav) [role="button"],
+      body.has-custom-cursor:not(.keyboard-nav) input,
+      body.has-custom-cursor:not(.keyboard-nav) select,
+      body.has-custom-cursor:not(.keyboard-nav) textarea,
+      body.has-custom-cursor:not(.keyboard-nav) .menu-toggle {
+        cursor: none;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 10000;
+      padding: 12px 20px;
+      background: var(--color-bg-secondary);
+      color: var(--color-text-primary);
+      border: 2px solid var(--color-accent-purple);
+    }
+
+    .skip-link:focus {
+      left: 16px;
+      top: 16px;
+      outline: 3px solid #2563EB;
+      outline-offset: 2px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-inline: auto;
+      padding-inline: clamp(20px, 5vw, 80px);
+    }
+
+    @media (max-width: 1280px) {
+      .container {
+        padding-inline: clamp(20px, 4.6vw, 60px);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        padding-inline: clamp(20px, 4.5vw, 48px);
+      }
+    }
+
+    @media (max-width: 991px) {
+      .container {
+        padding-inline: clamp(20px, 4vw, 32px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-inline: clamp(20px, 5vw, 24px);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .container {
+        padding-inline: clamp(18px, 4.5vw, 20px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding-inline: clamp(16px, 5vw, 20px);
+      }
+    }
+
+    .glass-card {
+      background: var(--color-glass-bg);
+      backdrop-filter: blur(20px) saturate(1.5);
+      -webkit-backdrop-filter: blur(20px) saturate(1.5);
+      border: 1px solid var(--color-glass-border);
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glass-card-hover:hover {
+      border-color: rgba(124, 58, 237, 0.4);
+      box-shadow: 0 16px 60px rgba(124, 58, 237, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-gradient);
+      color: #fff;
+      border-radius: 12px;
+      padding: 14px 32px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 24px rgba(124, 58, 237, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+      border: none;
+      will-change: transform;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 32px rgba(124, 58, 237, 0.55);
+      background: var(--color-gradient-hover);
+    }
+
+    .btn-primary:focus-visible {
+      outline: 3px solid #2563EB;
+      outline-offset: 3px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.06);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 12px;
+      padding: 14px 32px;
+      font-weight: 600;
+      backdrop-filter: blur(16px) saturate(1.2);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      will-change: transform;
+    }
+
+    .btn-secondary:hover {
+      border-image: linear-gradient(135deg, #7C3AED, #2563EB) 1;
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: 0 0 20px rgba(124, 58, 237, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary:focus-visible {
+      outline: 3px solid #7C3AED;
+      outline-offset: 3px;
+    }
+
+    .gradient-text {
+      background: var(--color-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-gradient-text {
+      background: linear-gradient(120deg, #BAE6FD 0%, #7DD3FC 18%, #C4B5FD 42%, #E9D5FF 72%, #F5F3FF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 28px rgba(124, 58, 237, 0.45)) drop-shadow(0 2px 12px rgba(0, 0, 0, 0.65));
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--color-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: var(--color-bg-primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    #page-loader .loader-icon {
+      width: 72px;
+      height: 72px;
+    }
+
+    #page-loader .loader-bar-wrap {
+      width: min(280px, 70vw);
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    #page-loader .loader-bar {
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: var(--color-gradient);
+      transform-origin: left center;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+    }
+
+    .site-header .container {
+      max-width: var(--container-max);
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(11, 15, 26, 0.72);
+      backdrop-filter: blur(16px) saturate(1.2);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: 16px 18px;
+      gap: clamp(12px, 2vw, 24px);
+    }
+
+    .logo-link img {
+      height: 40px;
+      width: auto;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      position: relative;
+      padding: 4px 0;
+      transition: color 0.25s ease, opacity 0.25s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--color-text-primary);
+    }
+
+    .main-nav a:focus-visible {
+      outline: 2px solid #2563EB;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .main-nav a.is-active {
+      color: var(--color-text-primary);
+    }
+
+    .main-nav a.is-active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--color-gradient);
+    }
+
+    .nav-cta {
+      flex-shrink: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      -webkit-appearance: none;
+      appearance: none;
+      color: inherit;
+    }
+
+    .menu-toggle:focus-visible {
+      outline: 3px solid #7C3AED;
+      outline-offset: 2px;
+    }
+
+    .menu-toggle .bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      position: absolute;
+      left: 11px;
+      transition: transform 0.35s ease, opacity 0.25s ease;
+    }
+
+    .menu-toggle .bar:nth-child(1) {
+      transform: translateY(-7px);
+    }
+
+    .menu-toggle .bar:nth-child(3) {
+      transform: translateY(7px);
+    }
+
+    body.nav-open .site-header .menu-toggle .bar:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    body.nav-open .site-header .menu-toggle .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    body.nav-open .site-header .menu-toggle .bar:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 850;
+      background: rgba(11, 15, 26, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    body.nav-open .mobile-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-overlay ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .mobile-overlay a {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-text-primary);
+    }
+
+    .mobile-overlay a:focus-visible {
+      outline: 3px solid #2563EB;
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 991px) {
+
+      .main-nav,
+      .header-inner .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+    }
+
+    #home {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #060a14;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-backdrop {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .hero-blob {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      width: min(120vw, 820px);
+      height: min(95vw, 640px);
+      border-radius: 50%;
+      background:
+        radial-gradient(ellipse 55% 50% at 45% 48%, rgba(167, 139, 250, 0.55) 0%, transparent 62%),
+        radial-gradient(ellipse 50% 48% at 58% 52%, rgba(59, 130, 246, 0.45) 0%, transparent 58%),
+        radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.35) 0%, transparent 72%);
+      filter: blur(56px);
+      opacity: 0.95;
+    }
+
+    .hero-blob--2 {
+      width: min(100vw, 520px);
+      height: min(80vw, 420px);
+      top: 44%;
+      opacity: 0.55;
+      filter: blur(40px);
+      background: radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.25) 0%, transparent 55%);
+    }
+
+    .hero-starfield {
+      position: absolute;
+      inset: 0;
+      opacity: 0.55;
+      background-image:
+        radial-gradient(1.5px 1.5px at 8% 12%, rgba(191, 219, 254, 0.85), transparent),
+        radial-gradient(1px 1px at 22% 8%, rgba(147, 197, 253, 0.7), transparent),
+        radial-gradient(1px 1px at 38% 18%, rgba(224, 242, 254, 0.55), transparent),
+        radial-gradient(1.5px 1.5px at 55% 6%, rgba(186, 230, 253, 0.65), transparent),
+        radial-gradient(1px 1px at 72% 14%, rgba(147, 197, 253, 0.5), transparent),
+        radial-gradient(1px 1px at 88% 22%, rgba(191, 219, 254, 0.6), transparent),
+        radial-gradient(1px 1px at 12% 35%, rgba(165, 243, 252, 0.45), transparent),
+        radial-gradient(1.5px 1.5px at 28% 42%, rgba(191, 219, 254, 0.55), transparent),
+        radial-gradient(1px 1px at 48% 38%, rgba(147, 197, 253, 0.5), transparent),
+        radial-gradient(1px 1px at 68% 44%, rgba(224, 242, 254, 0.5), transparent),
+        radial-gradient(1px 1px at 92% 40%, rgba(186, 230, 253, 0.55), transparent),
+        radial-gradient(1px 1px at 6% 58%, rgba(147, 197, 253, 0.45), transparent),
+        radial-gradient(1.5px 1.5px at 18% 68%, rgba(191, 219, 254, 0.6), transparent),
+        radial-gradient(1px 1px at 42% 62%, rgba(165, 243, 252, 0.4), transparent),
+        radial-gradient(1px 1px at 58% 72%, rgba(147, 197, 253, 0.5), transparent),
+        radial-gradient(1px 1px at 78% 66%, rgba(224, 242, 254, 0.45), transparent),
+        radial-gradient(1.5px 1.5px at 94% 58%, rgba(191, 219, 254, 0.55), transparent),
+        radial-gradient(1px 1px at 14% 82%, rgba(147, 197, 253, 0.5), transparent),
+        radial-gradient(1px 1px at 36% 88%, rgba(186, 230, 253, 0.5), transparent),
+        radial-gradient(1px 1px at 52% 92%, rgba(191, 219, 254, 0.55), transparent),
+        radial-gradient(1.5px 1.5px at 70% 86%, rgba(224, 242, 254, 0.5), transparent),
+        radial-gradient(1px 1px at 86% 78%, rgba(147, 197, 253, 0.45), transparent);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    #home::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 90% 65% at 50% 38%, rgba(6, 10, 20, 0.15) 0%, rgba(6, 10, 20, 0.55) 58%, rgba(6, 10, 20, 0.92) 100%);
+    }
+
+    #hero-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.38;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      padding: clamp(88px, 14vh, 120px) 0 clamp(64px, 10vh, 96px);
+      max-width: 920px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.72);
+      color: #F3F4F6;
+      border: 1px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+
+    .hero-badge::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: var(--color-gradient);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.1;
+      margin: 0 0 16px;
+      color: #FFFFFF;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-title .hero-word:not(.hero-gradient-text) {
+      color: #FFFFFF;
+      -webkit-text-fill-color: #FFFFFF;
+    }
+
+    .hero-title .hero-word {
+      display: inline-block;
+      margin: 0 0.12em 0 0;
+    }
+
+    .hero-title .hero-word:last-child {
+      margin-right: 0;
+    }
+
+    .hero-sub {
+      color: #F3F4F6;
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      max-width: 580px;
+      margin: 0 0 18px;
+      line-height: 1.65;
+      text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 28px;
+    }
+
+    .trust-row {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 20px;
+      font-size: 0.9rem;
+      color: var(--color-text-on-dark);
+    }
+
+    .trust-row li {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .trust-row li:not(:last-child)::after {
+      content: "";
+      width: 1px;
+      height: 16px;
+      background: var(--color-gradient);
+      opacity: 0.7;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+      color: #D1D5DB;
+      animation: bounce-y 2s ease-in-out infinite;
+    }
+
+    .scroll-indicator svg {
+      display: block;
+    }
+
+    @keyframes bounce-y {
+
+      0%,
+      100% {
+        transform: translate(-50%, 0);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: translate(-50%, 10px);
+        opacity: 1;
+      }
+    }
+
+    #about {
+      background: var(--color-bg-secondary);
+      padding: clamp(56px, 10vw, 100px) 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: clamp(28px, 4vw, 48px);
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .about-grid {
+        gap: 24px;
+      }
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 575px) {
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .feature-pill {
+      padding: 14px 16px;
+      font-size: 0.9rem;
+      border-radius: 14px;
+    }
+
+    .stats-card {
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .stat-item {
+      position: relative;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .stat-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.5), rgba(37, 99, 235, 0.35));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--color-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .stat-item>div:not(.stat-num) {
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.35;
+      margin-top: 4px;
+    }
+
+    #services {
+      background: var(--color-bg-primary);
+      padding: clamp(56px, 10vw, 100px) 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto clamp(28px, 5vw, 48px);
+      padding-inline: 4px;
+    }
+
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      margin: 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(18px, 2.2vw, 28px);
+      align-items: stretch;
+    }
+
+    @media (max-width: 991px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(16px, 2.5vw, 24px);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+      }
+    }
+
+    .service-card {
+      padding: clamp(20px, 3vw, 28px);
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: var(--color-gradient);
+      margin-bottom: 16px;
+      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+    }
+
+    .service-card p {
+      color: var(--color-text-secondary);
+      flex: 1;
+      margin: 0 0 16px;
+      font-size: 0.95rem;
+    }
+
+    .service-link {
+      font-weight: 600;
+      color: #DDD6FE;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      text-decoration: underline;
+      text-decoration-color: rgba(167, 139, 250, 0.45);
+      text-underline-offset: 4px;
+    }
+
+    .service-link:hover {
+      color: #E9D5FF;
+      text-decoration-color: rgba(167, 139, 250, 0.85);
+    }
+
+    .service-link:focus-visible {
+      color: #E9D5FF;
+      text-decoration-color: rgba(167, 139, 250, 0.85);
+      outline: 3px solid #2563EB;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .service-link .arrow {
+      transition: transform 0.25s ease;
+      display: inline-block;
+    }
+
+    .service-link:hover .arrow,
+    .service-link:focus-visible .arrow {
+      transform: translateX(4px);
+    }
+
+    .role {
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+    }
+
+    #why-us {
+      background: var(--color-bg-secondary);
+      padding: clamp(56px, 10vw, 100px) 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    #why-us::before {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.4) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #why-us .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .why-head {
+      text-align: center;
+      margin-bottom: clamp(24px, 4vw, 40px);
+      padding-inline: 4px;
+    }
+
+    .why-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+      margin: 0;
+    }
+
+    .why-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+      gap: clamp(14px, 2vw, 18px);
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @media (min-width: 1200px) {
+      .why-row {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+    }
+
+    .why-card {
+      padding: clamp(18px, 2.5vw, 22px);
+      min-width: 0;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .why-card[data-accent="purple"]:hover {
+      border-color: rgba(124, 58, 237, 0.45);
+      box-shadow: 0 12px 48px var(--color-glow-purple);
+    }
+
+    .why-card[data-accent="blue"]:hover {
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 12px 48px var(--color-glow-blue);
+    }
+
+    .why-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin: 10px 0 8px;
+    }
+
+    .why-card p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+    }
+
+    #results {
+      background: var(--color-bg-primary);
+      padding: clamp(56px, 10vw, 100px) 0 clamp(48px, 8vw, 80px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #results::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      transform: scale(1.12);
+      background:
+        radial-gradient(ellipse at 20% 30%, rgba(124, 58, 237, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(37, 99, 235, 0.22) 0%, transparent 50%);
+    }
+
+    #results .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(16px, 2.2vw, 24px);
+      margin-top: clamp(24px, 4vw, 40px);
+    }
+
+    @media (max-width: 768px) {
+      .results-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .result-card {
+      padding: 28px;
+    }
+
+    .result-card h3 {
+      font-family: var(--font-display);
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+    }
+
+    .result-card p {
+      margin: 0;
+      color: var(--color-text-secondary);
+    }
+
+    .marquee-wrap {
+      margin-top: clamp(36px, 6vw, 56px);
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+
+    .marquee {
+      display: flex;
+      gap: 48px;
+      white-space: nowrap;
+      animation: marquee-scroll 28s linear infinite;
+    }
+
+    .marquee span {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      background: var(--color-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    @keyframes marquee-scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    #testimonials {
+      background: var(--color-bg-secondary);
+      padding: clamp(56px, 10vw, 100px) 0;
+      overflow-x: hidden;
+    }
+
+    .testimonial-card {
+      padding: 32px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quote-mark {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 5rem;
+      line-height: 0.8;
+      background: var(--color-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .quote-text {
+      font-style: italic;
+      color: var(--color-text-secondary);
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .author-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      background: var(--color-gradient);
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .stars {
+      color: #FBBF24;
+      letter-spacing: 2px;
+      margin-top: 12px;
+    }
+
+    .swiper-nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .swiper-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .swiper-btn:hover {
+      transform: scale(1.05);
+      border-color: rgba(124, 58, 237, 0.5);
+    }
+
+    .swiper-btn:focus-visible {
+      outline: 3px solid #2563EB;
+      outline-offset: 2px;
+    }
+
+    .swiper-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .swiper-btn svg path {
+      fill: url(#gradIcon);
+    }
+
+    #contact {
+      background: var(--color-bg-primary);
+      padding: clamp(56px, 10vw, 100px) 0;
+      overflow-x: hidden;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: clamp(20px, 3vw, 32px);
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .contact-form-card,
+    .contact-info-card {
+      padding: clamp(22px, 4vw, 32px);
+      min-width: 0;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      background: #151c2e;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      color: var(--color-text-primary);
+      padding: 14px 18px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-select {
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 44px;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23C4B5FD' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-color: #151c2e;
+    }
+
+    .form-select option,
+    .form-select optgroup {
+      background-color: #111827;
+      color: #F9FAFB;
+      padding: 10px;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #9CA3AF;
+      opacity: 1;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: rgba(167, 139, 250, 0.75);
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    }
+
+    .form-error {
+      color: #FCA5A5;
+      font-size: 0.85rem;
+      margin-top: 6px;
+      min-height: 1.2em;
+    }
+
+    .contact-info-card h3 {
+      font-family: var(--font-display);
+      margin-top: 0;
+    }
+
+    .info-line {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      color: var(--color-text-secondary);
+    }
+
+    .info-line a {
+      color: var(--color-text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .info-line a:focus-visible {
+      outline: 3px solid #2563EB;
+      outline-offset: 2px;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .social-row a {
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .social-row a:hover {
+      border-color: transparent;
+      background: var(--color-gradient);
+      transform: translateY(-2px);
+    }
+
+    .social-row a:focus-visible {
+      outline: 3px solid #7C3AED;
+      outline-offset: 2px;
+    }
+
+    .trust-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--color-text-secondary);
+    }
+
+    .site-footer {
+      background: #080C14;
+      border-top: 1px solid transparent;
+      border-image: linear-gradient(90deg, #7C3AED, #2563EB) 1;
+      padding: 64px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-logo {
+      height: 40px;
+      width: auto;
+      margin-bottom: 12px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin: 0 0 16px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      color: var(--color-text-secondary);
+      transition: color 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-text-primary);
+    }
+
+    .footer-col a:focus-visible {
+      outline: 2px solid #2563EB;
+      outline-offset: 3px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 20px 0 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+    }
+
+    .scroll-top {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      z-index: 800;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--color-gradient);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 28px rgba(124, 58, 237, 0.45);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .scroll-top.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .scroll-top:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
+
+    #toast {
+      position: fixed;
+      bottom: 88px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(17, 24, 39, 0.95);
+      border: 1px solid rgba(124, 58, 237, 0.4);
+      padding: 14px 24px;
+      border-radius: 12px;
+      z-index: 10001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      font-weight: 500;
+    }
+
+    #toast.is-show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    #testimonial-swiper.swiper {
+      width: 100%;
+      max-width: 100%;
+      opacity: 1;
+      overflow: visible;
+      box-sizing: border-box;
+    }
+
+    #testimonial-swiper .swiper-slide {
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    #testimonials .swiper-pagination {
+      position: relative;
+      margin-top: 20px;
+      bottom: auto !important;
+      left: 0 !important;
+      width: 100% !important;
+      transform: none !important;
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, 0.35);
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: linear-gradient(135deg, #7C3AED, #2563EB);
+    }
+
+    .testimonial-swiper.swiper-fallback .swiper-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transform: none !important;
+    }
+
+    .testimonial-swiper.swiper-fallback .swiper-slide {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    #testimonial-swiper.swiper-fallback~.swiper-nav-wrap {
+      display: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .hero-blob {
+        filter: blur(24px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+    <div class="custom-cursor-ring" id="custom-cursor-ring"></div>
+    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+  </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div id="page-loader" role="status" aria-live="polite" aria-busy="true">
+    <img class="loader-icon" src="assets/images/pixelunfold-icon.webp" alt="" width="72" height="72" decoding="async">
+    <span class="visually-hidden">Loading PixelUnfold</span>
+    <div class="loader-bar-wrap" aria-hidden="true">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+  </div>
+
+  <div class="mobile-overlay" id="mobile-menu-overlay" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#results" class="mobile-nav-link">Results</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-primary mobile-nav-link">Start Project</a>
+    </nav>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo-link" aria-label="PixelUnfold home">
+        <img src="assets/images/pixelunfold-logo.webp" alt="PixelUnfold - Digital Agency" width="180" height="40"
+          fetchpriority="high" decoding="async">
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" data-section="home">Home</a></li>
+          <li><a href="#about" data-section="about">About</a></li>
+          <li><a href="#services" data-section="services">Services</a></li>
+          <li><a href="#results" data-section="results">Results</a></li>
+          <li><a href="#contact" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn-primary nav-cta">Start Project</a>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false"
+        aria-controls="mobile-menu-overlay">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero-section" aria-label="Hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="hero-blob"></div>
+        <div class="hero-blob hero-blob--2"></div>
+        <div class="hero-starfield"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-badge" id="hero-badge"><span aria-hidden="true">⚡</span> Digital Agency</div>
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-word">Unfold</span>
+          <span class="hero-word">Your</span>
+          <span class="hero-word">Brand</span>
+          <span class="hero-word">Into</span>
+          <span class="hero-word">a</span>
+          <span class="hero-word hero-gradient-text">Powerful</span>
+          <span class="hero-word hero-gradient-text">Digital</span>
+          <span class="hero-word hero-gradient-text">Experience</span>
+        </h1>
+        <p class="hero-sub" id="hero-sub">We design and develop high-performing websites, brands, and eCommerce
+          solutions that drive real business growth.</p>
+        <div class="hero-ctas" id="hero-ctas">
+          <a href="#contact" class="btn-primary">Get Started <span aria-hidden="true">→</span></a>
+          <a href="#results" class="btn-secondary">View Our Work</a>
+        </div>
+        <ul class="trust-row" id="hero-stats">
+          <li>50+ Projects</li>
+          <li>98% Satisfaction</li>
+          <li>Fast Delivery</li>
+        </ul>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div class="about-left" data-reveal="left">
+          <span class="section-label">About Us</span>
+          <h2 id="about-heading" class="section-animate">We Turn Ideas Into <span class="gradient-text">Impactful</span>
+            Digital Experiences</h2>
+          <p class="section-animate">PixelUnfold is a digital agency focused on clarity, performance, and measurable
+            outcomes. We partner with ambitious teams to craft experiences that feel premium and convert consistently.
+          </p>
+          <p class="section-animate">From discovery to launch, we combine thoughtful UX, robust engineering, and brand
+            storytelling—so your digital presence works as hard as you do.</p>
+          <div class="about-features">
+            <div class="glass-card feature-pill">🚀 Fast Delivery</div>
+            <div class="glass-card feature-pill">🎯 Conversion Focused</div>
+            <div class="glass-card feature-pill">💡 Creative &amp; Strategic</div>
+            <div class="glass-card feature-pill">🤝 Client-First</div>
+          </div>
+        </div>
+        <div class="about-right" data-reveal="right">
+          <div class="glass-card stats-card">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-num"><span class="counter" data-target="50" data-suffix="+">0</span></div>
+                <div>Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num"><span class="counter" data-target="98" data-suffix="%">0</span></div>
+                <div>Client Satisfaction</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num"><span class="counter" data-target="3" data-suffix="x">0</span></div>
+                <div>Average Traffic Growth</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num"><span class="counter" data-target="24" data-suffix="h">0</span></div>
+                <div>Avg Response Time</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">What We Do</span>
+          <h2 id="services-heading" class="section-animate">Services Built for Growth</h2>
+        </div>
+        <div class="services-grid">
+          <article class="glass-card glass-card-hover service-card service-reveal">
+            <div class="service-icon" aria-hidden="true">🖥️</div>
+            <h3>Website Design</h3>
+            <p>Clean, modern, conversion-focused designs that make your brand unforgettable.</p>
+            <a href="#contact" class="service-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="glass-card glass-card-hover service-card service-reveal">
+            <div class="service-icon" aria-hidden="true">⚙️</div>
+            <h3>Website Development</h3>
+            <p>Fast, responsive, scalable websites engineered for peak performance.</p>
+            <a href="#contact" class="service-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="glass-card glass-card-hover service-card service-reveal">
+            <div class="service-icon" aria-hidden="true">🟦</div>
+            <h3>WordPress Development</h3>
+            <p>Custom WordPress solutions built precisely for your business workflows.</p>
+            <a href="#contact" class="service-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="glass-card glass-card-hover service-card service-reveal">
+            <div class="service-icon" aria-hidden="true">🛒</div>
+            <h3>Shopify &amp; eCommerce</h3>
+            <p>High-converting stores designed to turn browsers into buyers.</p>
+            <a href="#contact" class="service-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="glass-card glass-card-hover service-card service-reveal">
+            <div class="service-icon" aria-hidden="true">🎨</div>
+            <h3>Branding &amp; Logo Design</h3>
+            <p>A powerful visual identity that builds trust and instant recognition.</p>
+            <a href="#contact" class="service-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="glass-card glass-card-hover service-card service-reveal">
+            <div class="service-icon" aria-hidden="true">📈</div>
+            <h3>Digital Strategy</h3>
+            <p>Data-driven strategies that align your digital presence with business goals.</p>
+            <a href="#contact" class="service-link">Learn More <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="why-head">
+          <h2 id="why-heading" class="section-animate">Why Brands Choose PixelUnfold</h2>
+        </div>
+        <div class="why-row">
+          <article class="glass-card why-card" data-accent="purple">
+            <div aria-hidden="true">⚡</div>
+            <h3>Fast Delivery</h3>
+            <p>Smart workflows mean faster results without cutting corners.</p>
+          </article>
+          <article class="glass-card why-card" data-accent="blue">
+            <div aria-hidden="true">🎯</div>
+            <h3>Conversion-First</h3>
+            <p>Every design decision is driven by performance and results.</p>
+          </article>
+          <article class="glass-card why-card" data-accent="purple">
+            <div aria-hidden="true">💡</div>
+            <h3>Creative Strategy</h3>
+            <p>We blend creativity with data for solutions that actually work.</p>
+          </article>
+          <article class="glass-card why-card" data-accent="blue">
+            <div aria-hidden="true">🤝</div>
+            <h3>Clear Communication</h3>
+            <p>No jargon. No delays. Just transparent, proactive updates.</p>
+          </article>
+          <article class="glass-card why-card" data-accent="purple">
+            <div aria-hidden="true">📈</div>
+            <h3>Built to Scale</h3>
+            <p>Websites architected to grow as your business grows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" aria-labelledby="results-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="results-heading" class="section-animate">We Don&apos;t Just Build Websites — We Build Digital Assets
+            That Perform</h2>
+        </div>
+        <div class="results-grid">
+          <article class="glass-card result-card section-animate">
+            <h3>📊 Increased Engagement</h3>
+            <p>Visitors stay longer and interact more with our designs.</p>
+          </article>
+          <article class="glass-card result-card section-animate">
+            <h3>✨ Better User Experience</h3>
+            <p>Intuitive interfaces that delight users across every device.</p>
+          </article>
+          <article class="glass-card result-card section-animate">
+            <h3>💰 Higher Conversion Rates</h3>
+            <p>Optimized funnels that turn traffic into paying customers.</p>
+          </article>
+          <article class="glass-card result-card section-animate">
+            <h3>🔧 Scalable Architecture</h3>
+            <p>Built to handle growth from day one.</p>
+          </article>
+        </div>
+        <div class="marquee-wrap" aria-hidden="true">
+          <div class="marquee">
+            <span>Fast</span><span>·</span><span>Reliable</span><span>·</span><span>Modern</span><span>·</span><span>Scalable</span><span>·</span><span>Accessible</span><span>·</span><span>Secure</span><span>·</span>
+            <span>Fast</span><span>·</span><span>Reliable</span><span>·</span><span>Modern</span><span>·</span><span>Scalable</span><span>·</span><span>Accessible</span><span>·</span><span>Secure</span><span>·</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="testimonials-heading" class="section-animate">What Our Clients Say</h2>
+        </div>
+        <svg width="0" height="0" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="gradIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7C3AED" />
+              <stop offset="100%" stop-color="#2563EB" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="swiper testimonial-swiper" id="testimonial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="glass-card testimonial-card">
+                <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                <p class="quote-text">&ldquo;PixelUnfold transformed our online presence. The website looks stunning and
+                  our leads doubled within a month.&rdquo;</p>
+                <div class="author-row">
+                  <div class="avatar" aria-hidden="true">RM</div>
+                  <div>
+                    <strong>Raj M.</strong><br>
+                    <span class="role">Founder, TechVenture</span>
+                  </div>
+                </div>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="glass-card testimonial-card">
+                <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                <p class="quote-text">&ldquo;Professional, fast, and creative. They delivered beyond our expectations
+                  and kept us updated throughout.&rdquo;</p>
+                <div class="author-row">
+                  <div class="avatar" aria-hidden="true">PS</div>
+                  <div>
+                    <strong>Priya S.</strong><br>
+                    <span class="role">CEO, StyleBoutique</span>
+                  </div>
+                </div>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="glass-card testimonial-card">
+                <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                <p class="quote-text">&ldquo;The Shopify store they built converted 3x better than our old website.
+                  Incredible ROI.&rdquo;</p>
+                <div class="author-row">
+                  <div class="avatar" aria-hidden="true">AK</div>
+                  <div>
+                    <strong>Arjun K.</strong><br>
+                    <span class="role">Director, NovaMart</span>
+                  </div>
+                </div>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="glass-card testimonial-card">
+                <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                <p class="quote-text">&ldquo;Their branding work gave us the identity we always wanted. Highly
+                  recommended!&rdquo;</p>
+                <div class="author-row">
+                  <div class="avatar" aria-hidden="true">SP</div>
+                  <div>
+                    <strong>Sneha P.</strong><br>
+                    <span class="role">Co-founder, GreenLeaf</span>
+                  </div>
+                </div>
+                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </article>
+            </div>
+          </div>
+          <div class="swiper-pagination" id="swiper-pagination"></div>
+        </div>
+        <div class="swiper-nav-wrap">
+          <button type="button" class="swiper-btn swiper-prev" aria-label="Previous testimonials">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" stroke="url(#gradIcon)" stroke-width="2" fill="none" />
+            </svg>
+          </button>
+          <button type="button" class="swiper-btn swiper-next" aria-label="Next testimonials">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="url(#gradIcon)" stroke-width="2" fill="none" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+        <div class="glass-card contact-form-card" data-reveal="left">
+          <h2 id="contact-heading">Start Your Project</h2>
+          <p style="color:var(--color-text-secondary); margin-top:0;">Tell us about your project and we&apos;ll get back
+            within 24 hours.</p>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label class="visually-hidden" for="full-name">Full Name</label>
+              <input class="form-input" type="text" id="full-name" name="full-name" placeholder="Your full name"
+                autocomplete="name" required aria-describedby="err-name">
+              <div class="form-error" id="err-name" role="alert" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label class="visually-hidden" for="email">Email Address</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com"
+                autocomplete="email" required aria-describedby="err-email">
+              <div class="form-error" id="err-email" role="alert" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label class="visually-hidden" for="phone">Phone Number</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX"
+                autocomplete="tel" aria-describedby="err-phone">
+              <div class="form-error" id="err-phone" role="alert" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label class="visually-hidden" for="service">Service Interested In</label>
+              <select class="form-select" id="service" name="service" required aria-describedby="err-service">
+                <option value="">Service Interested In</option>
+                <option>Website Design</option>
+                <option>Website Development</option>
+                <option>WordPress</option>
+                <option>Shopify/eCommerce</option>
+                <option>Branding</option>
+                <option>Other</option>
+              </select>
+              <div class="form-error" id="err-service" role="alert" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label class="visually-hidden" for="budget">Project Budget</label>
+              <select class="form-select" id="budget" name="budget" required aria-describedby="err-budget">
+                <option value="">Project Budget</option>
+                <option>Under ₹10K</option>
+                <option>₹10K–₹25K</option>
+                <option>₹25K–₹50K</option>
+                <option>₹50K+</option>
+                <option>Let&apos;s Discuss</option>
+              </select>
+              <div class="form-error" id="err-budget" role="alert" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label class="visually-hidden" for="message">Message / Project Details</label>
+              <textarea class="form-textarea" id="message" name="message" rows="4"
+                placeholder="Tell us about your project..." required aria-describedby="err-message"></textarea>
+              <div class="form-error" id="err-message" role="alert" aria-live="polite"></div>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;">Send Message on WhatsApp <span
+                aria-hidden="true">→</span></button>
+          </form>
+        </div>
+        <aside class="glass-card contact-info-card" data-reveal="right" aria-label="Contact information">
+          <h3>Let&apos;s Connect</h3>
+          <div class="info-line"><span aria-hidden="true">💬</span><span><a href="https://wa.me/917359064217">WhatsApp:
+                +91 73590 64217</a></span></div>
+          <div class="info-line"><span aria-hidden="true">📧</span><span>Email: <a
+                href="mailto:hello@pixelunfold.com">hello@pixelunfold.com</a></span></div>
+          <div class="info-line"><span aria-hidden="true">🌐</span><span>Website: <a
+                href="https://www.pixelunfold.com/">www.pixelunfold.com</a></span></div>
+          <div class="info-line"><span aria-hidden="true">📍</span><span>Location: India (Remote Worldwide)</span></div>
+          <div class="social-row">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="PixelUnfold on LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="PixelUnfold on Instagram">Instagram</a>
+            <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer"
+              aria-label="PixelUnfold on Behance">Behance</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="PixelUnfold on GitHub">GitHub</a>
+          </div>
+          <p class="trust-mini">Typical response time: &lt; 2 hours</p>
+          <p class="trust-mini"><span aria-hidden="true">🔒</span> SSL secured forms · GDPR-aware process</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img class="footer-logo" src="assets/images/pixelunfold-logo.webp" alt="PixelUnfold - Digital Agency"
+          width="180" height="40" loading="lazy" decoding="async" fetchpriority="low">
+        <p style="color:var(--color-text-secondary); margin:0 0 16px; max-width:280px;">Unfold Your Brand Into a
+          Powerful Digital Experience</p>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="PixelUnfold on LinkedIn">LinkedIn</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="PixelUnfold on Instagram">Instagram</a>
+          <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer"
+            aria-label="PixelUnfold on Behance">Behance</a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="PixelUnfold on GitHub">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Website Design</a></li>
+          <li><a href="#services">Website Development</a></li>
+          <li><a href="#services">WordPress Development</a></li>
+          <li><a href="#services">Shopify &amp; eCommerce</a></li>
+          <li><a href="#services">Branding &amp; Logo</a></li>
+          <li><a href="#services">Digital Strategy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p style="color:var(--color-text-secondary); margin:0 0 12px;">hello@pixelunfold.com<br>+91 73590 64217</p>
+        <a href="https://wa.me/917359064217" class="btn-primary" style="display:inline-flex;">Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2025 PixelUnfold. All rights reserved.</span>
+      <span>Designed &amp; Developed with ❤️ by PixelUnfold</span>
+    </div>
+  </footer>
+
+  <button type="button" class="scroll-top" id="scroll-top" aria-label="Scroll back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+  </button>
+  <div id="toast" role="status" aria-live="polite">Message ready to send on WhatsApp.</div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var $ = window.jQuery;
+      var gsap = window.gsap;
+      var ScrollTrigger = window.ScrollTrigger;
+      var THREE = window.THREE;
+      var Swiper = window.Swiper;
+
+      if (gsap && ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+        if (!reduceMotion) gsap.defaults({ ease: 'power3.out', duration: 0.8 });
+      }
+
+      (function initCustomCursor() {
+        var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+        var dot = document.getElementById('custom-cursor-dot');
+        var ring = document.getElementById('custom-cursor-ring');
+        if (!dot || !ring || reduceMotion || !finePointer.matches) return;
+
+        document.body.classList.add('has-custom-cursor');
+
+        var tx = window.innerWidth * 0.5;
+        var ty = window.innerHeight * 0.5;
+        var cx = tx;
+        var cy = ty;
+        var rx = tx;
+        var ry = ty;
+
+        function onPointerMove(e) {
+          tx = e.clientX;
+          ty = e.clientY;
+          document.body.classList.remove('keyboard-nav');
+        }
+
+        document.addEventListener('mousemove', onPointerMove, { passive: true });
+        document.addEventListener('mousedown', function () {
+          document.body.classList.add('is-cursor-press');
+        });
+        document.addEventListener('mouseup', function () {
+          document.body.classList.remove('is-cursor-press');
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Tab') document.body.classList.add('keyboard-nav');
+        });
+
+        function loop() {
+          cx += (tx - cx) * 0.38;
+          cy += (ty - cy) * 0.38;
+          rx += (tx - rx) * 0.13;
+          ry += (ty - ry) * 0.13;
+          dot.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)';
+          var sc = document.body.classList.contains('is-cursor-press') ? 0.78 : 1;
+          ring.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0) scale(' + sc + ')';
+          requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+      })();
+
+      var menuToggle = document.getElementById('menu-toggle');
+      var mobileOverlay = document.getElementById('mobile-menu-overlay');
+      var mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function isNavOpen() {
+        return document.body.classList.contains('nav-open');
+      }
+      function setNavOpen(open) {
+        document.body.classList.toggle('nav-open', !!open);
+        if (menuToggle) {
+          menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+        if (mobileOverlay) {
+          mobileOverlay.setAttribute('aria-hidden', open ? 'false' : 'true');
+        }
+      }
+      setNavOpen(false);
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function () {
+          setNavOpen(!isNavOpen());
+        });
+      }
+
+      if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', function (e) {
+          if (e.target === mobileOverlay) setNavOpen(false);
+        });
+      }
+
+      mobileLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          setNavOpen(false);
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setNavOpen(false);
+      });
+
+      var header = document.getElementById('site-header');
+      function onScrollHeader() {
+        if (window.scrollY > 80) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      }
+      window.addEventListener('scroll', onScrollHeader, { passive: true });
+      onScrollHeader();
+
+      var scrollTopBtn = document.getElementById('scroll-top');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) scrollTopBtn.classList.add('is-visible');
+        else scrollTopBtn.classList.remove('is-visible');
+      }, { passive: true });
+      scrollTopBtn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
+
+      var sections = ['home', 'about', 'services', 'results', 'contact'];
+      var navLinks = document.querySelectorAll('.main-nav a[data-section]');
+      var observerOptions = { rootMargin: '-40% 0px -45% 0px', threshold: 0 };
+      var sectionElements = sections.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+
+      var ioNav = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var id = entry.target.id;
+          navLinks.forEach(function (a) {
+            a.classList.toggle('is-active', a.getAttribute('data-section') === id);
+          });
+        });
+      }, observerOptions);
+      sectionElements.forEach(function (el) { ioNav.observe(el); });
+
+      function runLoader() {
+        var loader = document.getElementById('page-loader');
+        if (!loader) return;
+        if (reduceMotion || !gsap) {
+          loader.remove();
+          return;
+        }
+        var bar = document.getElementById('loader-bar');
+        var icon = loader.querySelector('.loader-icon');
+        var tl = gsap.timeline({
+          onComplete: function () {
+            loader.remove();
+          }
+        });
+        tl.from(icon, { scale: 0.4, opacity: 0, duration: 0.5, ease: 'back.out(1.6)' })
+          .to(bar, { width: '100%', duration: 0.9, ease: 'power2.inOut' })
+          .to(loader, { opacity: 0, duration: 0.5, ease: 'power2.out' });
+      }
+      runLoader();
+      setTimeout(function () {
+        var l = document.getElementById('page-loader');
+        if (l) l.remove();
+      }, 5000);
+
+      function heroEntrance() {
+        if (!gsap || reduceMotion) return;
+        var tl = gsap.timeline({ delay: 0.2 });
+        tl.from('#hero-badge', { y: 40, opacity: 0, duration: 0.6 })
+          .from('#hero-title .hero-word', { y: 40, opacity: 0, stagger: 0.1, duration: 0.55 }, '-=0.2')
+          .from('#hero-sub', { y: 40, opacity: 0, duration: 0.6 }, '-=0.3')
+          .from('#hero-ctas > *', { y: 40, opacity: 0, stagger: 0.1, duration: 0.55 }, '-=0.35')
+          .from('#hero-stats li', { y: 40, opacity: 0, stagger: 0.1, duration: 0.5 }, '-=0.3');
+      }
+      setTimeout(heroEntrance, reduceMotion ? 0 : 100);
+
+      if (gsap && ScrollTrigger && !reduceMotion) {
+        gsap.utils.toArray('.section-animate').forEach(function (el) {
+          gsap.from(el, {
+            scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
+            y: 30,
+            opacity: 0,
+            duration: 0.7
+          });
+        });
+        gsap.utils.toArray('[data-reveal="left"]').forEach(function (el) {
+          gsap.from(el, {
+            scrollTrigger: { trigger: el.closest('section') || el, start: 'top 80%' },
+            x: -50,
+            opacity: 0,
+            duration: 0.75
+          });
+        });
+        gsap.utils.toArray('[data-reveal="right"]').forEach(function (el) {
+          gsap.from(el, {
+            scrollTrigger: { trigger: el.closest('section') || el, start: 'top 80%' },
+            x: 50,
+            opacity: 0,
+            duration: 0.75
+          });
+        });
+        gsap.from('.service-reveal', {
+          scrollTrigger: { trigger: '#services .services-grid', start: 'top 85%' },
+          y: 60,
+          opacity: 0,
+          duration: 0.65,
+          stagger: 0.12
+        });
+      }
+
+      var countersRun = false;
+      function animateCounters() {
+        if (countersRun || !$) return;
+        countersRun = true;
+        $('.counter').each(function () {
+          var $el = $(this);
+          var target = parseFloat($el.data('target'));
+          var suffix = $el.data('suffix') || '';
+          $({ val: 0 }).animate({ val: target }, {
+            duration: reduceMotion ? 0 : 1600,
+            easing: 'swing',
+            step: function () {
+              var n = this.val;
+              if (suffix === 'x') $el.text((Math.round(n * 10) / 10) + suffix);
+              else $el.text(Math.round(n) + suffix);
+            },
+            complete: function () {
+              if (suffix === 'x') $el.text(target + suffix);
+              else $el.text(Math.round(target) + suffix);
+            }
+          });
+        });
+      }
+      var aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        var aboutIo = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              animateCounters();
+              aboutIo.disconnect();
+            }
+          });
+        }, { threshold: 0.25 });
+        aboutIo.observe(aboutSection);
+      }
+
+      var heroSection = document.getElementById('home');
+      var canvas = document.getElementById('hero-canvas');
+      var renderer, scene, camera, mesh, particles, rafId;
+      var mouse = { x: 0, y: 0 };
+      var targetRot = { x: 0, y: 0 };
+      var lastFrame = 0;
+      var frameMin = 1000 / 60;
+
+      function initThree() {
+        if (!THREE || !canvas || !heroSection) return;
+        lastFrame = 0;
+        var w = heroSection.clientWidth;
+        var h = heroSection.clientHeight;
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(50, w / h, 0.1, 1000);
+        camera.position.z = 5;
+        renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        renderer.setSize(w, h);
+
+        var vertexShader = 'varying vec3 vPos; void main() { vPos = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0);}';
+        var fragmentShader = 'varying vec3 vPos; void main() { float t = normalize(vPos).y * 0.5 + 0.5; vec3 c1 = vec3(0.55,0.32,0.98); vec3 c2 = vec3(0.22,0.48,0.98); vec3 col = mix(c1,c2,t) * 1.05; gl_FragColor = vec4(col, 0.88);}';
+        var geo = new THREE.TorusKnotGeometry(0.85, 0.28, 120, 16);
+        var mat = new THREE.ShaderMaterial({
+          vertexShader: vertexShader,
+          fragmentShader: fragmentShader
+        });
+        mesh = new THREE.Mesh(geo, mat);
+        scene.add(mesh);
+
+        var pGeo = new THREE.BufferGeometry();
+        var positions = [];
+        for (var i = 0; i < 120; i++) {
+          var r = 1.8 + Math.random() * 1.2;
+          var th = Math.random() * Math.PI * 2;
+          var ph = (Math.random() - 0.5) * Math.PI;
+          positions.push(r * Math.cos(th) * Math.cos(ph), r * Math.sin(ph), r * Math.sin(th) * Math.cos(ph));
+        }
+        pGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+        var pMat = new THREE.PointsMaterial({ color: 0x93c5fd, size: 0.035, transparent: true, opacity: 0.85 });
+        particles = new THREE.Points(pGeo, pMat);
+        scene.add(particles);
+
+        window.addEventListener('resize', onResizeThree);
+        document.addEventListener('mousemove', onMouseMove, { passive: true });
+      }
+
+      function onResizeThree() {
+        if (!heroSection || !renderer || !camera) return;
+        var w = heroSection.clientWidth;
+        var h = heroSection.clientHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+      }
+
+      function onMouseMove(e) {
+        var nx = (e.clientX / window.innerWidth) * 2 - 1;
+        var ny = (e.clientY / window.innerHeight) * 2 - 1;
+        mouse.x = nx * 20;
+        mouse.y = -ny * 20;
+      }
+
+      function disposeThree() {
+        window.removeEventListener('resize', onResizeThree);
+        document.removeEventListener('mousemove', onMouseMove);
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+        if (renderer) {
+          renderer.dispose();
+        }
+        renderer = scene = camera = mesh = particles = null;
+      }
+
+      var threeActive = false;
+      function tick(now) {
+        if (!threeActive || !mesh || !renderer) return;
+        if (now - lastFrame < frameMin) {
+          rafId = requestAnimationFrame(tick);
+          return;
+        }
+        lastFrame = now;
+        targetRot.x += (mouse.y * 0.001 - targetRot.x) * 0.06;
+        targetRot.y += (mouse.x * 0.001 - targetRot.y) * 0.06;
+        mesh.rotation.x += 0.002 + targetRot.x * 0.02;
+        mesh.rotation.y += 0.003 + targetRot.y * 0.02;
+        mesh.position.x += (mouse.x * 0.015 - mesh.position.x) * 0.05;
+        mesh.position.y += (mouse.y * 0.015 - mesh.position.y) * 0.05;
+        if (particles) {
+          particles.rotation.y += 0.0008;
+          particles.rotation.x += 0.0004;
+        }
+        renderer.render(scene, camera);
+        rafId = requestAnimationFrame(tick);
+      }
+
+      if (heroSection && THREE) {
+        var heroIo = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              if (!renderer) initThree();
+              threeActive = true;
+              if (!rafId) rafId = requestAnimationFrame(tick);
+            } else {
+              threeActive = false;
+              if (rafId) cancelAnimationFrame(rafId);
+              rafId = null;
+              disposeThree();
+            }
+          });
+        }, { threshold: 0.05 });
+        heroIo.observe(heroSection);
+      }
+
+      var testimonialSwiperEl = document.getElementById('testimonial-swiper');
+      if (testimonialSwiperEl) {
+        testimonialSwiperEl.classList.add('is-ready');
+        if (typeof Swiper !== 'undefined') {
+          try {
+            window._testimonialSwiper = new Swiper(testimonialSwiperEl, {
+              rewind: true,
+              speed: 600,
+              autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+              slidesPerView: 1,
+              spaceBetween: 20,
+              watchOverflow: true,
+              observer: true,
+              observeParents: true,
+              pagination: { el: '#swiper-pagination', clickable: true },
+              navigation: { prevEl: '.swiper-prev', nextEl: '.swiper-next' },
+              breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 22 },
+                1280: { slidesPerView: 3, spaceBetween: 24 }
+              }
+            });
+          } catch (err) {
+            testimonialSwiperEl.classList.add('swiper-fallback');
+          }
+        } else {
+          testimonialSwiperEl.classList.add('swiper-fallback');
+        }
+      }
+
+      if ($) $('#contact-form').on('submit', function (e) {
+        e.preventDefault();
+        var name = $.trim($('#full-name').val());
+        var email = $.trim($('#email').val());
+        var phone = $.trim($('#phone').val());
+        var service = $('#service').val();
+        var budget = $('#budget').val();
+        var message = $.trim($('#message').val());
+        function setErr(id, msg) { $('#' + id).text(msg || ''); }
+        setErr('err-name', '');
+        setErr('err-email', '');
+        setErr('err-phone', '');
+        setErr('err-service', '');
+        setErr('err-budget', '');
+        setErr('err-message', '');
+        var ok = true;
+        if (!name) { setErr('err-name', 'Please enter your full name.'); ok = false; }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setErr('err-email', 'Please enter a valid email.'); ok = false; }
+        if (!service) { setErr('err-service', 'Please select a service.'); ok = false; }
+        if (!budget) { setErr('err-budget', 'Please select a budget range.'); ok = false; }
+        if (!message) { setErr('err-message', 'Please tell us about your project.'); ok = false; }
+        if (!ok) return;
+        var text = 'Hello PixelUnfold! 👋\n\nName: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nService: ' + service + '\nBudget: ' + budget + '\nMessage: ' + message;
+        var url = 'https://wa.me/917359064217?text=' + encodeURIComponent(text);
+        window.open(url, '_blank', 'noopener,noreferrer');
+        var toast = document.getElementById('toast');
+        toast.classList.add('is-show');
+        setTimeout(function () { toast.classList.remove('is-show'); }, 3200);
+      });
+    });
+  </script>
+</body>
+
+</html>
